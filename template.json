@@ -1,0 +1,9 @@
+{
+  "name": "bun-sveltekit-ts",
+  "shortname": "",
+  "author": "ironpark",
+  "description": "A template for svelte kit + bun + ts",
+  "helpurl": "",
+  "version": "v0.0.1",
+  "schema": 3
+}
