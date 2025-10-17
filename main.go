@@ -14,7 +14,7 @@ import (
 // made available to the frontend.
 // See https://pkg.go.dev/embed for more information.
 
-//go:embed all:frontend/dist
+//go:embed all:frontend/build
 var assets embed.FS
 
 // main function serves as the application's entry point. It initializes the application, creates a window,
@@ -28,7 +28,7 @@ func main() {
 	// 'Bind' is a list of Go struct instances. The frontend has access to the methods of these instances.
 	// 'Mac' options tailor the application when running an macOS.
 	app := application.New(application.Options{
-		Name:        "{{.ProjectName}}",
+		Name:        "testapp2",
 		Description: "A demo of using raw HTML & CSS",
 		Services: []application.Service{
 			application.NewService(&GreetService{}),
