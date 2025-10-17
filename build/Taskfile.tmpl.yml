@@ -38,10 +38,10 @@ tasks:
     cmds:
       - bun run {{ "{{.BUILD_COMMAND}}" }} -q
     env:
-      PRODUCTION: { { '''{{.PRODUCTION | default "false"}}''' } }
+      PRODUCTION: {{ '''{{.PRODUCTION | default "false"}}''' }}
     vars:
       BUILD_COMMAND:
-        { { '''{{if eq .PRODUCTION "true"}}build{{else}}build:dev{{end}}''' } }
+        {{ '''{{if eq .PRODUCTION "true"}}build{{else}}build:dev{{end}}''' }}
 
   generate:bindings:
     label: generate:bindings (BUILD_FLAGS={{ "{{.BUILD_FLAGS}}" }})
